@@ -1,0 +1,32 @@
+<%- include("_header") -%>
+
+    <h1>Books</h1>
+    <p><a class="btn btn-dark" href="/create">Create a new book</a></p>
+
+    <h2>There are <%= model.length %> books in the database</h2>
+
+    <table class="table table-striped">
+        <thead class="thead-dark">
+            <tr>
+                <th scope="col">Title</th>
+                <th scope="col">Author</th>
+                <th scope="col">Comments</th>
+                <th scope="col">Actions</th>
+            </tr>
+        </thead>
+        <tbody>
+            <% model.forEach(book => { %>
+                <tr>
+                    <td><%= book.title %></td>
+                    <td><%= book.author %></td>
+                    <td><%= book.comments %></td>
+                    <td>
+                        <a class="btn btn-sm btn-warning" href="/edit/<%= book.book_id %>">Edit</a>
+                        <a class="btn btn-sm btn-danger" href="/delete/<%= book.book_id %>">Delete</a>
+                    </td>
+                </tr>
+            <% }) %>
+        </tbody>
+    </table>
+
+<%- include("_footer") -%>

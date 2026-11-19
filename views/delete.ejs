@@ -1,0 +1,19 @@
+<%- include("_header") -%>
+
+    <h1>Delete book</h1>
+    <p>Are you sure you want to delete this book?</p>
+
+    <form action="/delete/<%= model.book_id %>" method="post">
+        <dl>
+            <dt>Title</dt>
+            <dd><%= model.title %></dd>
+            <dt>Author</dt>
+            <dd><%= model.author %></dd>
+            <dt>Comments</dt>
+            <dd><%= model.comments %></dd>
+        </dl>
+        <input type="submit" value="Delete" class="btn btn-danger" />
+        <a class="btn btn-outline-dark" href="/books">Cancel</a>
+    </form>
+
+<%- include("_footer") -%>
