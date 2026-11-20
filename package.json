@@ -1,13 +1,9 @@
 {
   "name": "pgcrud",
   "version": "1.0.0",
-  "description": "IS 445/545 Tutorial 14 - PostgreSQL CRUD application",
   "main": "index.js",
   "scripts": {
     "start": "node index.js"
-  },
-  "engines": {
-    "node": ">=18"
   },
   "license": "ISC",
   "dependencies": {
